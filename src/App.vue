@@ -1,21 +1,16 @@
 <template>
-  <h1>Memes</h1>
-  <h2>{{ $store.state.titleApp }}</h2>
-  <h3>{{ titleApp }}</h3>
+  <div class="container">
+    <list-memes></list-memes>
+  </div>
 </template>
 
 <script>
-import { useStore } from "vuex";
+import {defineComponent} from "vue";
+import ListMemes from "@/components/ListMemes.vue";
 
-export default {
-  setup() {
-    const store = useStore();
-    console.log(useStore().state.titleApp);
-    return {
-      ...store.state,
-    };
-  },
-};
+export default defineComponent({
+  components: {ListMemes}
+})
 </script>
 
 <style></style>
