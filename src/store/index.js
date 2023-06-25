@@ -1,14 +1,12 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
   state: {
+    titleApp: "Memes v2",
+    memes: [],
   },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+  getters: {},
+  mutations: {},
+  actions: {},
+  modules: {},
+});
