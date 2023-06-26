@@ -1,7 +1,7 @@
 <template>
   <h1 class="title">{{ title }}</h1>
   <div class="total-show">
-    <select>
+    <select @change="changeTotalShow($event)">
       <option value="">All</option>
       <option value="5">5</option>
       <option value="10">10</option>
@@ -35,12 +35,14 @@ export default {
     });
 
     const changeTotalShow = (event) => {
-      const val = event.target.value;
+      const total = event.target.value;
+      store.dispatch("getMemes", { total: total });
     };
 
     return {
       title: store.state.titleApp,
       memes,
+      changeTotalShow
     };
   },
 };
